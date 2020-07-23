@@ -1,0 +1,17 @@
+boto3==1.14.26
+botocore==1.17.26
+click==7.1.2
+docutils==0.15.2
+fastapi==0.60.1
+h11==0.9.0
+httptools==0.1.1
+jmespath==0.10.0
+pydantic==1.6.1
+python-dateutil==2.8.1
+s3transfer==0.3.3
+six==1.15.0
+starlette==0.13.6
+urllib3==1.25.10
+uvicorn==0.11.6
+uvloop==0.14.0
+websockets==8.1

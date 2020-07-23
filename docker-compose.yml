@@ -1,0 +1,15 @@
+version: "0.1"
+services:
+  publisher-sns:
+    build: ./publisher
+    env_file:
+      - .publisher.env
+    ports:
+      - "8000:8000"
+
+  subscriber-sns:
+    build: ./subscriber
+    env_file:
+      - .subscriber.env
+    ports:
+      - "3000:3000"
