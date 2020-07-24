@@ -4,6 +4,8 @@
 
 * [About](#about)
 * [Run the Project](#run-the-project)
+  * [Run with docker-compose](#run-with-docker-compose)
+  * [Test locally with live SNS](#test-locally-with-live-sns)
 * [Built With](#built-with)
 
 ## About
@@ -21,7 +23,7 @@ docker-compose up
 ```
 This will start both services. The publisher listens on port 8000 and the
 subscriber listens on 3000. The publisher will publish any messages posted
-to it to `SNS`.
+to it to `SNS`. Both services have documentation URL `/redoc`.
 
 ### Test locally with live SNS
 In order to test locally with `SNS`, you must make the subscriber's port

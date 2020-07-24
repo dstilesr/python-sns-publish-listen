@@ -5,10 +5,6 @@ from config import SUBSCRIBER
 class SubscribeHandler(object):
 
     @classmethod
-    def confirm_subscription(cls, subscribe_url: str):
-        pass
-
-    @classmethod
     def process(cls, **kwargs):
         """
         Processes a message received from SNS.

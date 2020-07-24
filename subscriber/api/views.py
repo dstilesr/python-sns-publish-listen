@@ -19,7 +19,7 @@ async def health():
 @router.post("/receive-message")
 async def receive_view(request: ReceiverSerializer):
     """
-    Receives a request to publish a message to SNS.
+    Receives a message from SNS.
 
     :param request:
     :return:

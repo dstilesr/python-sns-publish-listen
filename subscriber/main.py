@@ -5,7 +5,7 @@ from config import SUBSCRIBER
 
 app = FastAPI(
     title="SNS Subscriber service",
-    description="Publishes received messages to SNS",
+    description="Receives messages from SNS",
     redoc_url="/redoc"
 )
 
