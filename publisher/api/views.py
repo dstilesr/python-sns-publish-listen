@@ -3,6 +3,7 @@ from starlette import status
 from fastapi import APIRouter
 from .serializers import Serializer
 from fastapi.responses import JSONResponse
+from fastapi.exceptions import HTTPException
 
 router = APIRouter()
 
@@ -33,9 +34,9 @@ async def publish_view(request: Serializer):
             status_code=status.HTTP_200_OK
         )
     else:
-        response = JSONResponse(
-            content={"message": "Could not publish message!"},
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to publish message."
         )
 
     return response
