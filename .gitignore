@@ -144,3 +144,7 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+# Terraform
+**/.terraform/
+**/.terraform*
