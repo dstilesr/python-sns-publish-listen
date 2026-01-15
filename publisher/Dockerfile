@@ -1,10 +1,10 @@
-FROM python:3.13-slim-bullseye
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
 
 EXPOSE 8000
 
 WORKDIR /app
 COPY . ./
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN uv sync
 
-CMD ["uvicorn", "main:app", "--port", "8000", "--host", "0.0.0.0"]
+CMD ["uv", "run", "uvicorn", "main:app", "--port", "8000", "--host", "0.0.0.0"]
