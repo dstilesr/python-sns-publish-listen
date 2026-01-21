@@ -2,11 +2,17 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~>4.0"
+      version = "~>6.0"
     }
   }
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = var.region
+
+  default_tags {
+    tags = {
+      Project = "SNS Publish Subscribe Test"
+    }
+  }
 }

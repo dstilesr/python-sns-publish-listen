@@ -1,5 +1,5 @@
 
 resource "aws_sns_topic" "publish_subscribe" {
-  name         = "publish-subscribe-poc"
+  name         = var.topic_name
   display_name = "SNS POC Topic"
 }
